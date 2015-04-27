@@ -331,10 +331,9 @@ plugin.Tx_Formhandler.settings.predef {
 				table = tt_address
 				selectFields = tt_address.uid, GROUP_CONCAT(DISTINCT sys_dmail_ttaddress_category_mm.uid_foreign) as dmail_category
 				join = sys_dmail_ttaddress_category_mm ON sys_dmail_ttaddress_category_mm.uid_local = tt_address.uid
-				where = sys_dmail_ttaddress_category_mm.uid_local=
-				where.append = TEXT
-				where.append.data = GP:tx_formhandler_subscription|uid
-				where.append.intval = 1
+				where.wrap = sys_dmail_ttaddress_category_mm.uid_local=|
+				where.data = GP:tx_formhandler_subscription|uid
+				where.intval = 1
 				groupBy = sys_dmail_ttaddress_category_mm.uid_local
 			}
 		}
