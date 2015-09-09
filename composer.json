@@ -8,12 +8,12 @@
 		"formhandler_subscription": "self.version"
 	},
 	"require": {
-		"typo3": ">=4.5.0",
-		"formhandler": ">=1.4.0",
-		"authcode": ">=0.1.0"
+		"typo3/cms": ">=4.5.0",
+		"typo3-ter/formhandler": ">=1.4.0",
+		"typo3-ter/authcode": ">=0.1.0"
 	},
 	"suggest": {
-		"tt_address": "Store subscriber address records.",
-		"tinyurls": "Generate beautified activation URLs."
+		"typo3-ter/tt-address": "Store subscriber address records.",
+		"typo3-ter/tinyurls": "Generate beautified activation URLs."
 	}
 }
